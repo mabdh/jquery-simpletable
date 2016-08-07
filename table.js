@@ -7,19 +7,19 @@ $(document).ready(function() {
 function test(){
     $("#list_badges").simpletable({
         getURL : function(){
-            return "http://reqres.in/api/users";
+            return "https://reqres.in/api/users";
         },
         dataFormatter : function(dataraw){
             return dataraw.data;
         },
         deleteURL : function(idPrime){
-           return "http://reqres.in/api/users/"+idPrime;
+           return "https://reqres.in/api/users/"+idPrime;
         },
         editURL : function(idPrime){
-            return "http://reqres.in/api/users/"+idPrime;
+            return "https://reqres.in/api/users/"+idPrime;
         },
         addURL : function(idPrime){
-            return "http://reqres.in/api/users";
+            return "https://reqres.in/api/users";
         },
         customRenderView : {
             avatar : function(rowNum, idPrime, dataValue){
