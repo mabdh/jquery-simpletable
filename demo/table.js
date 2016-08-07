@@ -6,8 +6,8 @@ $(document).ready(function() {
 
 function test(){
     $("#list_badges").simpletable({
-        get : function(cb){
-            $.get("http://reqres.in/api/users",cb);
+        getURL : function(){
+            return "http://reqres.in/api/users";
         },
         dataFormatter : function(dataraw){
             return dataraw.data;

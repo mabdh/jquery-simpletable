@@ -289,7 +289,8 @@
 
 			$(tableElement).after(addButtonHtml);
 
-	   		opts.get(function(dataraw){
+			 $.get(opts.getURL(),
+            	function(dataraw){
 	   			var data = opts.dataFormatter(dataraw);
 	   			dataTable = data;
 	   			console.log(dataTable);
@@ -300,7 +301,9 @@
    		};
 
 		var getDataFromServer =  function(){
-   			opts.get(function(dataraw){
+
+            $.get(opts.getURL(),
+            	function(dataraw){
 	   			var data = opts.dataFormatter(dataraw);
 	   			dataTable = data;
 	   			renderTableView(data);
@@ -394,7 +397,7 @@
    }; 
 
    	$.fn.simpletable.defaults = {
-		get : function(){},
+		getURL : function(){},
 		deleteURL : function(){},
 		editURL : function(){},
 		addURL : function(){},
